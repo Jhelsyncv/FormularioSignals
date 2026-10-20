@@ -1,0 +1,84 @@
+.card-lista {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.vacio {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.grid-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.item-card {
+  border-left: 4px solid #2563eb;
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.details {
+  display: flex;
+  gap: 15px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-editar {
+  background-color: #f59e0b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn-editar:hover {
+  background-color: #d97706;
+}
+
+.btn-eliminar {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn-eliminar:hover {
+  background-color: #dc2626;
+}

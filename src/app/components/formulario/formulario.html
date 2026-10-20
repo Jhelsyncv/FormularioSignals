@@ -1,0 +1,43 @@
+<div class="card-form">
+  <h2>{{ idModificando() ? 'Editar Producto' : 'Registrar Producto' }}</h2>
+  <form (ngSubmit)="guardar()">
+    <div class="field">
+      <label>Nombre del Producto *</label>
+      <input type="text" [ngModel]="nombre()" (ngModelChange)="nombre.set($event)" name="nombre" required />
+    </div>
+
+    <div class="field">
+      <label>Categoría</label>
+      <select [ngModel]="categoria()" (ngModelChange)="categoria.set($event)" name="categoria">
+        <option value="Electrónica">Electrónica</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Ropa">Ropa</option>
+        <option value="Deportes">Deportes</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Precio ($) *</label>
+      <input type="number" [ngModel]="precio()" (ngModelChange)="precio.set($event)" name="precio" required />
+    </div>
+
+    <div class="field">
+      <label>Stock (Unidades) *</label>
+      <input type="number" [ngModel]="stock()" (ngModelChange)="stock.set($event)" name="stock" required />
+    </div>
+
+    <div class="field">
+      <label>Descripción</label>
+      <textarea [ngModel]="descripcion()" (ngModelChange)="descripcion.set($event)" name="descripcion" rows="3"></textarea>
+    </div>
+
+    <div class="botones">
+      <button type="submit" class="btn-guardar">
+        {{ idModificando() ? 'Actualizar Producto' : 'Agregar Producto' }}
+      </button>
+      <button *ngIf="idModificando()" type="button" (click)="limpiar()" class="btn-cancelar">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
